@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => ({
   // CORREÇÃO FINAL AQUI:
   // Se o Document Root do Plesk aponta DIRETAMENTE para a pasta 'dist',
   // o caminho base relativo à URL do site é a raiz '/'
-  base: mode === 'development' ? '/' : '/', // <--- ESTA LINHA FOI CORRIGIDA
+  base: mode === 'development' ? '/' : '/ripiiaia-nexus-platform/', // <--- ESTA LINHA FOI CORRIGIDA
 
   server: {
     host: "::",
