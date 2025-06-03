@@ -7,7 +7,11 @@ export default defineConfig(({ mode }) => ({
   // CORREÇÃO FINAL AQUI:
   // Se o Document Root do Plesk aponta DIRETAMENTE para a pasta 'dist',
   // o caminho base relativo à URL do site é a raiz '/'
-  base: mode === 'development' ? '/' : '/ripiiaia-nexus-platform/', // <--- ESTA LINHA FOI CORRIGIDA
+  // Para desenvolvimento local, use base '/'.
+  // Para deploy no GitHub Pages, use o nome do repositório como base.
+  // Configuração dinâmica para funcionar tanto no GitHub Pages quanto no Plesk/local
+  // Use a variável de ambiente VITE_BASE_URL para sobrescrever se necessário
+  base: process.env.VITE_BASE_URL || (mode === 'development' ? '/' : '/ripiiaia-nexus-platform/'),
 
   server: {
     host: "::",
