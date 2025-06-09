@@ -4,13 +4,8 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // CORREÇÃO FINAL AQUI:
-  // Se o Document Root do Plesk aponta DIRETAMENTE para a pasta 'dist',
-  // o caminho base relativo à URL do site é a raiz '/'
-  // Para desenvolvimento local, use base '/'.
-  // Para deploy no GitHub Pages, use '/Plataforma-RipiIaia/'.
-  // Para deploy no Plesk, use base '/'.
-  base: process.env.VITE_BASE_URL || (mode === 'development' ? '/' : '/Plataforma-RipiIaia/'),
+  // Para deploy no Plesk, use base '/'. Para GitHub Pages, use VITE_BASE_URL='/Plataforma-RipiIaia/'
+  base: process.env.VITE_BASE_URL || '/',
 
   server: {
     host: "::",

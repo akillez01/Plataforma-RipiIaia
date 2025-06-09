@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto text-center max-w-4xl">
         <Badge variant="outline" className="mb-6 border-emerald-200 text-emerald-700 bg-emerald-50/50 dark:border-emerald-800 dark:text-emerald-300 dark:bg-emerald-950/30">
-          🌐 Bem-vindos à Ripiiaia
+          🌐 Bem-vindos à Ripi Iaiá
         </Badge>
         <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text leading-tight animate-fade-in">
           Conexão, Crescimento e Intercâmbio de Saberes

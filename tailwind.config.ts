@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,19 +22,63 @@ export default {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
+				// =============================
+				// PALETA DE CORES PRINCIPAL
+				// =============================
+				//
+				// Para alterar as cores do projeto, edite os valores abaixo.
+				// Você pode usar hsl(), hex ou rgb. Exemplo: '#0ea5e9' ou 'hsl(160, 100%, 40%)'
+				//
+				// Cores institucionais (exemplo):
+				// primary: Cor principal da marca
+				// secondary: Cor secundária
+				// accent: Destaques e botões
+				// card: Fundo dos cards
+				// background: Fundo geral
+				// foreground: Cor do texto principal
+				// border: Cor das bordas
+				//
+				// Paletas inspiradas na floresta amazônica:
+				// emerald: Tons de verde (floresta)
+				// amber: Tons de amarelo/laranja (terra, madeira)
+				// sky: Tons de azul (céu, água)
+				// sage: Tons neutros suaves
+				// slate: Tons de cinza
+				//
+				// Exemplo de uso no projeto:
+				// bg-primary, text-secondary, border-accent, bg-emerald-600, text-amber-700, etc.
+				// =============================
+
+				// --- Cores utilitárias globais ---
+				// border: Cor das bordas gerais
+				// input: Cor de inputs
+				// ring: Cor de foco
+				// background: Fundo principal
+				// foreground: Texto principal
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+
+				// --- Cores institucionais ---
+				// primary: Cor principal da marca
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'hsl(var(--primary))', // Cor principal
+					foreground: 'hsl(var(--primary-foreground))' // Texto sobre primary
 				},
+				// secondary: Cor secundária
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				// destructive: Erros/alertas
+				// muted: Tons neutros
+				// accent: Destaques
+				// popover: Fundo de popovers
+				// card: Fundo dos cards
+				// sidebar: Fundo e elementos da sidebar
+
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -66,59 +109,67 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cores inspiradas na floresta amazônica - mais claras e suaves
+
+				// --- Paletas temáticas ---
+				// emerald: Tons de verde (floresta)
 				emerald: {
-					50: 'hsl(var(--emerald-50))',
-					100: 'hsl(var(--emerald-100))',
-					200: 'hsl(var(--emerald-200))',
-					300: 'hsl(var(--emerald-300))',
-					400: 'hsl(var(--emerald-400))',
-					500: 'hsl(var(--emerald-500))',
-					600: 'hsl(var(--emerald-600))',
-					700: 'hsl(var(--emerald-700))',
-					800: 'hsl(var(--emerald-800))',
-					900: 'hsl(var(--emerald-900))',
+					// Verde floresta
+					50: '#ecfdf5',
+					100: '#d1fae5',
+					200: '#a7f3d0',
+					300: '#6ee7b7',
+					400: '#34d399',
+					500: '#10b981',
+					600: '#059669',
+					700: '#047857',
+					800: '#065f46',
+					900: '#064e3b',
 				},
-				// Tons de terra e madeira - mais claros
+				// amber: Tons de amarelo/laranja (terra, madeira)
 				amber: {
-					50: 'hsl(var(--amber-50))',
-					100: 'hsl(var(--amber-100))',
-					200: 'hsl(var(--amber-200))',
-					300: 'hsl(var(--amber-300))',
-					400: 'hsl(var(--amber-400))',
-					500: 'hsl(var(--amber-500))',
-					600: 'hsl(var(--amber-600))',
-					700: 'hsl(var(--amber-700))',
-					800: 'hsl(var(--amber-800))',
-					900: 'hsl(var(--amber-900))',
+					// Marrom/terra com tons de madeira
+					50: '#f9f6f2', // bege claro
+					100: '#f3e9dd',
+					200: '#e6d3bb',
+					300: '#d2b48c', // marrom claro (tan)
+					400: '#b98c5a', // caramelo/madeira clara
+					500: '#a47149', // madeira média
+					600: '#855c3a', // marrom médio
+					700: '#6b4226', // marrom escuro
+					800: '#4e2e1f', // madeira escura
+					900: '#2d1a10', // marrom/madeira bem escuro
 				},
-				// Tons de céu e água - suaves
+				// sky: Tons de azul (céu, água)
 				sky: {
-					50: 'hsl(var(--sky-50))',
-					100: 'hsl(var(--sky-100))',
-					200: 'hsl(var(--sky-200))',
-					300: 'hsl(var(--sky-300))',
-					400: 'hsl(var(--sky-400))',
-					500: 'hsl(var(--sky-500))',
-					600: 'hsl(var(--sky-600))',
-					700: 'hsl(var(--sky-700))',
-					800: 'hsl(var(--sky-800))',
-					900: 'hsl(var(--sky-900))',
+					// Azul céu/água
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e',
 				},
-				// Tons neutros mais suaves
+				// sage: Tons neutros suaves
 				sage: {
-					50: 'hsl(var(--sage-50))',
-					100: 'hsl(var(--sage-100))',
-					200: 'hsl(var(--sage-200))',
-					300: 'hsl(var(--sage-300))',
-					400: 'hsl(var(--sage-400))',
-					500: 'hsl(var(--sage-500))',
-					600: 'hsl(var(--sage-600))',
-					700: 'hsl(var(--sage-700))',
-					800: 'hsl(var(--sage-800))',
-					900: 'hsl(var(--sage-900))',
+					// Neutros suaves
+					50: '#f8faf9',
+					100: '#e9f5ee',
+					200: '#d3e8dd',
+					300: '#b7d6c7',
+					400: '#8fc1a9',
+					500: '#6ba98a',
+					600: '#4e8c6e',
+					700: '#3b6d56',
+					800: '#2d5442',
+					900: '#1e362b',
 				},
+				// slate: Tons de cinza
 				slate: {
+					// Cinzas
 					50: '#f8fafc',
 					100: '#f1f5f9',
 					200: '#e2e8f0',

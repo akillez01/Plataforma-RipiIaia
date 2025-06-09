@@ -357,7 +357,7 @@ const Portal = () => {
       <footer className="py-16 bg-gray-900 border-t border-gray-700/50 text-gray-400 text-center">
         {/* ... (Footer content remains the same) ... */}
         <div className="container mx-auto px-4">
-          <p className="text-lg mb-2">&copy; {new Date().getFullYear()} Portal Ripiiaia.</p>
+          <p className="text-lg mb-2">&copy; {new Date().getFullYear()} Portal Ripi Iaiá.</p>
           <p className="text-sm">Conectando inovação, natureza e impacto social.</p>
           <div className="mt-6 flex justify-center space-x-6">
             <Link to="/privacy" className="hover:text-emerald-400 transition-colors">Política de Privacidade</Link>
