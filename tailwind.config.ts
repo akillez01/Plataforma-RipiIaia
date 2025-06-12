@@ -20,6 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Inter', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				// =============================
@@ -64,13 +66,35 @@ export default {
 				// --- Cores institucionais ---
 				// primary: Cor principal da marca
 				primary: {
-					DEFAULT: 'hsl(var(--primary))', // Cor principal
-					foreground: 'hsl(var(--primary-foreground))' // Texto sobre primary
+					50:  '#FBF9F5',  // bege muito claro
+          100: '#F4F0E5',  // bege claro
+          200: '#E9E0C8',  // creme suave
+          300: '#D7C9A0',  // bege areia
+          400: '#C3B07A',  // bege amarelado
+          500: '#AD9963',  // caramelo suave
+          600: '#998857',  // caramelo médio
+          700: '#877A4F',  // tom mais ameno
+          800: '#7C6E52',  // tom mais escuro definido
+          900: '#716349',  // ligeiramente mais denso
+          950: '#665A43',  // opcional — se quiser mais contraste, pode remover
+					DEFAULT: '#334155',
+					foreground: '#fff',
 				},
 				// secondary: Cor secundária
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					50: '#F0F9FF',
+          100: '#E0F2FE',
+          200: '#BAE6FD',
+          300: '#7DD3FC',
+          400: '#38BDF8',
+          500: '#0EA5E9',
+          600: '#0284C7',
+          700: '#0369A1',
+          800: '#075985',
+          900: '#0C4A6E',
+          950: '#082F49',
+					DEFAULT: '#6b7280',
+					foreground: '#fff',
 				},
 				// destructive: Erros/alertas
 				// muted: Tons neutros
@@ -114,16 +138,17 @@ export default {
 				// emerald: Tons de verde (floresta)
 				emerald: {
 					// Verde floresta
-					50: '#ecfdf5',
-					100: '#d1fae5',
-					200: '#a7f3d0',
-					300: '#6ee7b7',
-					400: '#34d399',
-					500: '#10b981',
-					600: '#059669',
-					700: '#047857',
-					800: '#065f46',
-					900: '#064e3b',
+					50:  '#FBF9F5',  // bege muito claro
+          100: '#F4F0E5',  // bege claro
+          200: '#E9E0C8',  // creme suave
+          300: '#D7C9A0',  // bege areia
+          400: '#C3B07A',  // bege amarelado
+          500: '#AD9963',  // caramelo suave
+          600: '#998857',  // caramelo médio
+          700: '#877A4F',  // tom mais ameno
+          800: '#7C6E52',  // tom mais escuro definido
+          900: '#716349',  // ligeiramente mais denso
+          950: '#665A43',  // opcional — se quiser mais contraste,
 				},
 				// amber: Tons de amarelo/laranja (terra, madeira)
 				amber: {
@@ -156,32 +181,47 @@ export default {
 				// sage: Tons neutros suaves
 				sage: {
 					// Neutros suaves
-					50: '#f8faf9',
-					100: '#e9f5ee',
-					200: '#d3e8dd',
-					300: '#b7d6c7',
-					400: '#8fc1a9',
-					500: '#6ba98a',
-					600: '#4e8c6e',
-					700: '#3b6d56',
-					800: '#2d5442',
-					900: '#1e362b',
+					50:  '#FBF9F5',  // bege muito claro
+          100: '#F4F0E5',  // bege claro
+          200: '#E9E0C8',  // creme suave
+          300: '#D7C9A0',  // bege areia
+          400: '#C3B07A',  // bege amarelado
+          500: '#AD9963',  // caramelo suave
+          600: '#998857',  // caramelo médio
+          700: '#877A4F',  // tom mais ameno
+          800: '#7C6E52',  // tom mais escuro definido
+          900: '#716349',  // ligeiramente mais denso
+          950: '#665A43',  // opcional — se quiser mais contraste,
 				},
 				// slate: Tons de cinza
 				slate: {
 					// Cinzas
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a',
-					950: '#020617',
-				}
+					50:  '#FBF9F5',  // bege muito claro
+          100: '#F4F0E5',  // bege claro
+          200: '#E9E0C8',  // creme suave
+          300: '#D7C9A0',  // bege areia
+          400: '#C3B07A',  // bege amarelado
+          500: '#AD9963',  // caramelo suave
+          600: '#998857',  // caramelo médio
+          700: '#877A4F',  // tom mais ameno
+          800: '#7C6E52',  // tom mais escuro definido
+          900: '#716349',  // ligeiramente mais denso
+          950: '#665A43',  // opcional — se quiser mais contraste,
+				},
+				earth: {
+					50:  '#FBF9F5',  // bege muito claro
+          100: '#F4F0E5',  // bege claro
+          200: '#E9E0C8',  // creme suave
+          300: '#D7C9A0',  // bege areia
+          400: '#C3B07A',  // bege amarelado
+          500: '#AD9963',  // caramelo suave
+          600: '#998857',  // caramelo médio
+          700: '#877A4F',  // tom mais ameno
+          800: '#7C6E52',  // tom mais escuro definido
+          900: '#716349',  // ligeiramente mais denso
+          950: '#665A43',  // opcional — se quiser mais contraste,
+					DEFAULT: '#f9fafb',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -234,5 +274,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [import('tailwindcss-animate')],
 } satisfies Config;
