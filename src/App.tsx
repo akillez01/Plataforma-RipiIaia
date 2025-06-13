@@ -15,6 +15,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProjetosParceiros from "./pages/ProjetosParceiros";
 import RadioRipiiaia from "./pages/Radio";
+import RipiIaia from "./pages/RipiIaia";
 import Servicos from "./pages/Servicos";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/parceiros" element={<ProjetosParceiros />} />
             <Route path="/projetos-parceiros" element={<ProjetosParceiros />} />
             <Route path="/doacoes" element={<Doacoes />} />
+            <Route path="/ripi-iaia" element={<RipiIaia />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </HashRouter>

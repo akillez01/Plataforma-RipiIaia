@@ -174,16 +174,19 @@ const SubdomainsSection = () => {
       </div>
       <div className="container mx-auto relative z-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-green-400">Nossos Espaços</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-green-400 break-words leading-tight w-full max-w-full overflow-visible whitespace-pre-line" style={{wordBreak: 'break-word', hyphens: 'auto', letterSpacing: '-0.5px', lineHeight: '1.1'}}>
+            Nossos Espaços
+          </h2>
+          <p className="text-base sm:text-xl text-gray-400 max-w-2xl mx-auto">
             Conheça as áreas que compõem a plataforma Ripi Iaiá: tecnologia, tradição, cultura e serviços para um ecossistema inovador e colaborativo.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-stretch"> {/* Adicionado items-stretch */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto items-stretch">
           {subdomains.map((subdomain, index) => (
             <div
               key={index}
-              className={getCardClasses(subdomain.designType, subdomain.primaryColor, subdomain.secondaryColor, subdomain.span, subdomain.minHeightClass)}
+              className={getCardClasses(subdomain.designType, subdomain.primaryColor, subdomain.secondaryColor, subdomain.span, subdomain.minHeightClass) + ' w-full max-w-full min-w-0'}
+              style={{wordBreak: 'break-word', hyphens: 'auto'}}
             >
               {/* Internal Background Image para o card de doações */}
               {subdomain.internalBgImage && (subdomain.designType === "gradient-card-with-image") && (
@@ -199,20 +202,20 @@ const SubdomainsSection = () => {
               )}
 
               {/* Conteúdo do Card */}
-              <div className={`relative z-10 p-8 flex flex-col justify-between h-full`}>
-                <div className="flex items-center gap-4 border-b border-white/10 pb-8 mb-8">
+              <div className={`relative z-10 p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full`}>
+                <div className="flex items-center gap-4 border-b border-white/10 pb-6 sm:pb-8 mb-6 sm:mb-8">
                   <span className={getIconClasses(subdomain.designType, subdomain.primaryColor)}>
                     {subdomain.icon && <subdomain.icon className="w-8 h-8 text-white" />}
                   </span>
                   <div className="text-left">
-                    <h3 className={getTitleClasses(subdomain.designType, subdomain.primaryColor)}>{subdomain.title}</h3>
+                    <h3 className={getTitleClasses(subdomain.designType, subdomain.primaryColor) + ' break-words w-full max-w-full'} style={{wordBreak: 'break-word', hyphens: 'auto'}}>{subdomain.title}</h3>
                     <span className={getSubtitleClasses(subdomain.designType, subdomain.primaryColor)}>{subdomain.subtitle}</span>
                   </div>
                 </div>
-                <p className={getDescriptionClasses(subdomain.designType)}>{subdomain.description}</p>
+                <p className={getDescriptionClasses(subdomain.designType) + ' break-words w-full max-w-full'} style={{wordBreak: 'break-word', hyphens: 'auto'}}>{subdomain.description}</p>
                 <ul className="mb-6 grid grid-cols-2 gap-2 text-sm">
                   {subdomain.features.map((feature, i) => (
-                    <li key={i} className={getFeatureClasses(subdomain.designType, subdomain.primaryColor)}>
+                    <li key={i} className={getFeatureClasses(subdomain.designType, subdomain.primaryColor) + ' break-words w-full max-w-full'} style={{wordBreak: 'break-word', hyphens: 'auto'}}>
                       <span className={`inline-block w-2 h-2 bg-${subdomain.primaryColor}-300 rounded-full`}></span>
                       {feature}
                     </li>
@@ -220,7 +223,8 @@ const SubdomainsSection = () => {
                 </ul>
                 <Link
                   to={subdomain.route}
-                  className={getLinkClasses(subdomain.primaryColor)}
+                  className={getLinkClasses(subdomain.primaryColor) + ' w-full max-w-full break-words'}
+                  style={{wordBreak: 'break-word', hyphens: 'auto'}}
                 >
                   Acessar
                 </Link>

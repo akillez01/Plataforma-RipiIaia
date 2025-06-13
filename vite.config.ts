@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Para deploy no Plesk, use base '/'. Para GitHub Pages, use VITE_BASE_URL='/Plataforma-RipiIaia/'
-  base: process.env.VITE_BASE_URL || '/',
+  // Para deploy no Plesk, use base '/'. Para GitHub Pages, use VITE_BASE_URL='/Ong-Ripiiaia/'
+  base: process.env.VITE_BASE_URL || '/Ong-Ripiiaia/',
 
   server: {
     host: "::",

@@ -21,7 +21,7 @@ const plataformas = [
     {
       title: "Ripi Iaiá - Universo Daime",
       description: "Conteúdo, cultura e espiritualidade do Daime e medicinas da floresta.",
-      url: "https://akillez01.github.io/Ripi-Iaia/",
+      url: "/ripi-iaia", // Agora direciona para a rota interna do projeto
       type: "Portal Principal"
     },
     {

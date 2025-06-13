@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"
@@ -33,20 +32,24 @@ export function ThemeProvider({
 
   useEffect(() => {
     const root = window.document.documentElement
-
     root.classList.remove("light", "dark")
 
+    let appliedTheme = theme
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"
-
-      root.classList.add(systemTheme)
-      return
+      appliedTheme = systemTheme
     }
-
-    root.classList.add(theme)
+    root.classList.add(appliedTheme)
+    // Força atualização do background do body
+    document.body.style.backgroundColor = ""
+    document.body.classList.remove("bg-earth-50", "bg-slate-950", "bg-gray-950", "bg-black")
+    if (appliedTheme === "dark") {
+      document.body.classList.add("bg-slate-950")
+    } else {
+      document.body.classList.add("bg-earth-50")
+    }
   }, [theme])
 
   const value = {

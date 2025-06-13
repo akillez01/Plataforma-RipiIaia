@@ -126,7 +126,7 @@ const RadioRipiiaia = () => {
       </header>
 
       {/* --- Seção Hero: Player Principal --- */}
-      <section className="py-16 md:py-24 px-4 relative overflow-hidden bg-earth-100">
+      <section className="py-16 md:py-24 px-2 sm:px-4 relative overflow-hidden bg-earth-100">
         {/* Carrossel de Imagens de Fundo para o Player */}
         <div className="absolute inset-0 z-0">
           {playerBgImages.map((src, index) => (
@@ -143,34 +143,43 @@ const RadioRipiiaia = () => {
         </div>
 
         {/* Conteúdo do Player */}
-        <div className="container mx-auto max-w-4xl text-center relative z-10 text-primary-900">
+        <div className="container mx-auto max-w-4xl text-center relative z-10 text-primary-900 px-2 sm:px-0">
           <Badge className="mb-4 bg-primary-500/90 text-white border-primary-400/50 text-sm px-4 py-1.5 shadow-md">
             🎵 TRANSMISSÃO AO VIVO - 24H
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg text-primary-900" style={{textShadow: '0 2px 8px #fff, 0 1px 1px #0002'}}>
-            Sintonize a Alma: Rádio Ripi Iaiá
+          <h2
+            className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg text-primary-900 break-words leading-tight whitespace-pre-line w-full max-w-full overflow-visible"
+            style={{
+              textShadow: '0 2px 8px #fff, 0 1px 1px #0002',
+              wordBreak: 'break-word',
+              hyphens: 'auto',
+              letterSpacing: '-0.5px',
+              lineHeight: '1.1',
+            }}
+          >
+            {`Conexão,\nCrescimento\ne\nIntercâmbio de Saberes`}
           </h2>
-          <p className="text-lg md:text-xl mb-8 font-semibold text-primary-800 bg-white/70 rounded-xl inline-block px-6 py-2 shadow" style={{textShadow: '0 1px 2px #fff'}}>
+          <p className="text-base xs:text-lg md:text-xl mb-8 font-semibold text-primary-800 bg-white/70 rounded-xl inline-block px-4 sm:px-6 py-2 shadow" style={{textShadow: '0 1px 2px #fff'}}>
             Sons da floresta, cânticos ancestrais e a vibrante melodia da vida. Uma jornada sonora ininterrupta.
           </p>
 
           {/* Player de Rádio */}
-          <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 max-w-md mx-auto border border-primary-200 shadow-lg">
-            <audio ref={audioRef} src="/audio/radio.mp3" preload="auto" /> {/* Caminho para o áudio na pasta public/audio */}
-            <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-2 text-primary-900">Manhã na Floresta</h3>
-              <p className="opacity-90 text-primary-700">Ao vivo agora • Com Ana Sagrada</p>
+          <div className="bg-white/80 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-md mx-auto border border-primary-200 shadow-lg flex flex-col items-center">
+            <audio ref={audioRef} src="/audio/radio.mp3" preload="auto" />
+            <div className="mb-6 w-full">
+              <h3 className="text-lg sm:text-2xl font-semibold mb-2 text-primary-900">Manhã na Floresta</h3>
+              <p className="opacity-90 text-primary-700 text-sm sm:text-base">Ao vivo agora • Com Ana Sagrada</p>
             </div>
-            <div className="flex items-center justify-center space-x-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
               <Button
                 size="lg"
                 variant="ghost"
-                className="rounded-full w-16 h-16 bg-primary-200 text-primary-700 hover:bg-primary-300 hover:text-primary-900 shadow-md transition-all transform hover:scale-105"
+                className="rounded-full w-14 h-14 sm:w-16 sm:h-16 bg-primary-200 text-primary-700 hover:bg-primary-300 hover:text-primary-900 shadow-md transition-all transform hover:scale-105"
                 onClick={() => setIsPlaying(!isPlaying)}
               >
                 {isPlaying ? <Pause className="w-8 h-8" /> : <Play className="w-8 h-8" />}
               </Button>
-              <div className="flex items-center space-x-2 text-primary-900">
+              <div className="flex items-center gap-2 w-full max-w-[160px]">
                 <Volume2 className="w-6 h-6" />
                 <input
                   type="range"
@@ -179,7 +188,7 @@ const RadioRipiiaia = () => {
                   step="0.01"
                   value={volume}
                   onChange={(e) => setVolume(parseFloat(e.target.value))}
-                  className="w-32 h-2 bg-primary-100 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:bg-primary-400 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:appearance-none"
+                  className="w-full h-2 bg-primary-100 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:bg-primary-400 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:appearance-none"
                 />
               </div>
             </div>
